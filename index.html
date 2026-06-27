@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lovely Decision</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Inter, system-ui, sans-serif;
+      color: #eef2ff;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at top left, rgba(102, 126, 234, 0.35), transparent 25%),
+                  radial-gradient(circle at bottom right, rgba(236, 72, 153, 0.25), transparent 18%),
+                  linear-gradient(135deg, #0a0f2a 0%, #141c3f 45%, #1a254f 100%);
+      overflow: hidden;
+    }
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+    .page {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 420px);
+      padding: 28px;
+    }
+    .card {
+      position: relative;
+      padding: 32px 28px;
+      border-radius: 32px;
+      background: rgba(12, 18, 45, 0.82);
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .headline {
+      font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+      line-height: 1.05;
+      margin: 0 0 16px;
+      letter-spacing: -0.04em;
+      color: #f8fbff;
+    }
+    .subtext {
+      margin: 0 0 28px;
+      color: #b8c2ff;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+    .question {
+      font-size: 1.15rem;
+      margin-bottom: 18px;
+      color: #f8fbff;
+    }
+    .gif {
+      width: 100%;
+      height: auto;
+      border-radius: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+      margin-bottom: 24px;
+    }
+    .button-row {
+      position: relative;
+      min-height: 58px;
+    }
+    .button-row button {
+      cursor: pointer;
+      border: none;
+      border-radius: 999px;
+      padding: 15px 26px;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
+    }
+    .button-row button:hover {
+      transform: translateY(-2px) scale(1.02);
+    }
+    .yes-button {
+      background: linear-gradient(135deg, #34d399, #10b981);
+      color: #fff;
+      margin-right: 14px;
+    }
+    .no-button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: linear-gradient(135deg, #f97316, #ef4444);
+      color: #fff;
+    }
+    .footer {
+      margin-top: 24px;
+      color: rgba(226, 232, 255, 0.64);
+      font-size: 0.92rem;
+      text-align: center;
+      line-height: 1.6;
+    }
+    .footer strong {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="card">
+      <h1 class="headline">Do you like me?</h1>
+      <div class="question">Do you want to click Yes?</div>
+      <img class="gif" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw0MzUxOTZ8MHwxfHNlYXJjaHwxfHxjYXJkJTIwbGlnaHR8ZW58MHx8fHwxNjk4NjM4NzA1&ixlib=rb-4.0.3&q=80&w=800" alt="Crystal glow card" />
+      <div class="button-row">
+        <button class="yes-button">Yes</button>
+        <button class="no-button">No</button>
+      </div>
+      <div class="footer">Made with a smooth gradient and floating card layout for a modern landing page feel.</div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
